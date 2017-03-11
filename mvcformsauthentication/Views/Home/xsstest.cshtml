@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "test";
+}
+
+<h2>test</h2>
+@{
+    string xssmessage = "Jon\x3cscript\x3e%20alert(\x27pwnd\x27)%20\x3c/script\x3e";
+    string message = "<script>alert('hacked');</script>";
+    var items = new string[] { "one", "two", "three" };
+    var isbn = "1239192387";
+    <ul>
+        @foreach (var item in items)
+        {
+            <li>The item name is @item.</li>
+        }
+
+    </ul>
+    <span>Items_@items.Length</span>
+    <div>@message</div>
+    <div> 邮件地址自动识别不解析</div>
+    <div>isbn@isbn</div>
+    <div>isbn@isbn.abc</div>
+    <div>isbn@isbn.abcaweqwewq</div>
+    <div>isbn@isbn.com</div>
+    <div>isbn@(isbn)</div>
+    <div>@*@Html.Raw(message)*@</div>
+}
+<div id="message">
+    www
+</div>
+<div id="result">
+
+</div>
+<script>  
+        var ww = 'hello,@ViewBag.UserName1 ';
+        $('#message').html(ww).show('slow');
+</script>
+@section Footer{
+    This is the footer.
+}
+<input type="text" name="name" value="" />
+<input type="text" name="1name" value="" />
+<script>
+    $('#result').load('/home/about');
+</script>
+<img src="/home/about"  />

@@ -1,0 +1,36 @@
+﻿@model mvcformsauthentication.Models.Product
+
+@{
+    ViewBag.Title = "AngularTest";
+}
+
+@*@{
+        Layout = "~/Views/Shared/_CustomMasterLayout.cshtml";
+    }*@
+<h2>AngularTest</h2>
+
+@section scripts{
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/angular-route.js"></script>
+
+    <script src="~/Client/Scripts/atTheMovies.js"></script>
+    <script src="~/Client/Scripts/MovieService.js"></script>
+
+    <script src="~/Client/Scripts/ListController.js"></script>
+    <script src="~/Client/Scripts/DetailsController.js"></script>
+
+}
+<div ng-app="atTheMovies">
+    @*<div ng-controller="ListController">
+            {{message}}
+            <br />
+            Movie Count:{{movieCount}}
+            <table>
+                <tr ng-repeat="movie in movies">
+                    <td>{{movie.Title}}</td>
+                    <td><a href="#/details/{{movie.Id}}">查看详情</a></td>
+                </tr>
+            </table>
+        </div>*@
+    <ng-view></ng-view>
+</div>

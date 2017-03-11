@@ -1,0 +1,14 @@
+﻿<div ng-controller="ListController">
+    {{message}}
+    <br />
+    Movie Count:{{movieCount}}
+    <table>
+        <tr ng-repeat="movie in movies">
+            <td>{{movie.title}}</td>
+            <td><a href="#/details/{{movie.id}}">查看详情</a></td>
+            <td><button ng-click="delete(movie)">删除</button></td>
+        </tr>
+    </table>
+    <button class="btn" ng-click="create()">Create</button>
+
+</div>
