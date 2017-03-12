@@ -19,7 +19,7 @@ namespace mvcformsauthentication.Controllers
         // GET: api/Movie
         public IQueryable<Movie> GetMovies()
         {
-            return db.Movies.asn;
+            return db.Movies;
         }
 
         // GET: api/Movie/5
